@@ -19,9 +19,12 @@ void SpriteCommon::Initialize(DirectXCommon* _dxCommon)
 	dxCommon = _dxCommon;
 
 	//シェーダ
-	ComPtr<ID3DBlob>vsBlob;
+	/*ComPtr<ID3DBlob>vsBlob;
 	ComPtr<ID3DBlob>psBlob;
-	ComPtr<ID3DBlob>errorBlob;
+	ComPtr<ID3DBlob>errorBlob;*/
+	ID3DBlob* vsBlob = nullptr;
+	ID3DBlob* psBlob = nullptr;
+	ID3DBlob* errorBlob = nullptr;
 
 	//読み込み
 	result = D3DCompileFromFile(
